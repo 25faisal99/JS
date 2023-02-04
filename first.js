@@ -537,3 +537,132 @@ var display = () =>{
     });
 }
 console.log(display());
+
+
+// XMLHttpRequest API
+// const getMethode = (property, url, messag) => {
+//     var req = new XMLHttpRequest;
+//     req.open(property, url);
+//     req.setRequestHeader('Content-Type', 'application/json');
+//     req.onload = () => {
+//         var re = req.response;
+//         // console.log(req.responseText);
+//         // console.log(req.responseType);
+//         // console.log(req.responseURL);
+//         // console.log(req.status);
+//         // console.log(req.statusText);
+
+//         console.log(JSON.parse(re));
+//     }
+//     req.onerror = () => {
+//         console.log('error is found');
+//     }
+//     req.send(JSON.stringify(messag));
+// }
+// getMethode('GET', 'https://jsonplaceholder.typicode.com/posts');
+// console.log('post method')
+// getMethode('POST', 'https://jsonplaceholder.typicode.com/posts', {
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+// });
+// console.log('put method')
+// getMethode('PUT','https://jsonplaceholder.typicode.com/posts/5',{
+//     title: 'jsFile',
+//     body: 'html',
+//     userId: 5
+// });
+// console.log('patch method')
+// getMethode('PATCH','https://jsonplaceholder.typicode.com/posts/6',
+// {
+//     title: 'gutibajBondhu'
+// });
+// console.log('delete method')
+// getMethode('DELETE','https://jsonplaceholder.typicode.com/posts/5');
+
+// fetch API
+
+//getData
+// fetch('https://jsonplaceholder.typicode.com/posts')
+
+//postData
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//     method: 'POST',
+//     body: JSON.stringify({
+//         title: 'foo',
+//         body: 'bar',
+//         userId: 1,
+//     }),
+//     headers: {
+//         'Content-type': 'application/json; charset=UTF-8',
+//     }})
+
+//putData
+// fetch('https://jsonplaceholder.typicode.com/posts/1',{
+//     method: 'PUT',
+//     body: JSON.stringify({
+//       id: 1,
+//       title: 'footttt',
+//       body: 'barrrrdem',
+//       userId: 1,
+//     }),
+//     headers: {
+//       'Content-type': 'application/json; charset=UTF-8',
+//     },
+//   })
+
+//patchData
+// fetch('https://jsonplaceholder.typicode.com/posts/1', {
+//   method: 'PATCH',
+//   body: JSON.stringify({
+//     title: 'fooFaisal',
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+// fetch('https://jsonplaceholder.typicode.com/posts/1', {
+//     method: 'DELETE',
+// })
+    // .then((f) => {
+    //     if (!f.ok) {
+    //         var error = `error is ${f.status}`;
+    //         throw new Error(error);
+    //     }
+    //     return f.json();
+
+    // }).then((f) => {
+    //     console.log(f)
+    // })
+    // .catch((err) => {
+    //     console.log(err);
+    // });
+
+    // axios API
+    //axios.get('https://jsonplaceholder.typicode.com/posts/1')
+    // axios.post('https://jsonplaceholder.typicode.com/posts',{
+    //     body: JSON.stringify({
+    //         title: 'foo',
+    //         body: 'bar',
+    //         userId: 1,
+    //       })
+    // })
+    // axios.put('https://jsonplaceholder.typicode.com/posts/1',{
+    //     body: JSON.stringify({
+    //         title: 'Mohammad Faisal',
+    //             body: 'barrrererer',
+    //             userId: 1
+    //     })
+    // })
+    //  axios.patch('https://jsonplaceholder.typicode.com/posts/1',
+    //  {
+    //     body: JSON.stringify({
+    //         body: 'jym body'
+    //     })
+    //  })
+     axios.delete('https://jsonplaceholder.typicode.com/posts/1')
+    .then((response) => {
+        console.log(response.data)
+    }).catch((err) => {
+        console.log(err);
+    });
